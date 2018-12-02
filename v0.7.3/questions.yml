@@ -1,4 +1,19 @@
 questions:
+   # UST Support Plan Config
+- variable: plan
+  default: Gold
+  description: "Choose the Plan you want"
+  type: string
+  required: true
+  label: UST Global Plan
+  group: "UST Plan Settings"
+- variable: Auto Backup Enabled
+  default: true
+  description: "Do you want enable auto backup"
+  type: boolean
+  label: Enable Autobackup
+  group: "UST Plan Settings"
+  # Default Kafka
 - variable: defaultImage
   default: "true"
   description: "Use default Docker image"
@@ -57,14 +72,6 @@ questions:
     description: "kafka-topics-ui image tag"
     type: string
     label: Kafka-Topics-UI Image Tag
- # UST Support Plan Conig
-- variable: plan
-  default: Gold
-  description: "Choose the Plan you want"
-  type: string
-  required: true
-  label: UST Global Plan
-  group: "UST Plan Settings"
 # Kafka Configurations
 - variable: replicas
   default: 3
