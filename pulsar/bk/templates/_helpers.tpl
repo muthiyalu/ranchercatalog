@@ -2,7 +2,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "mongodb-replicaset.name" -}}
+{{- define "pulsar.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
@@ -11,7 +11,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "mongodb-replicaset.fullname" -}}
+{{- define "pulsar.fullname" -}}
 {{- if .Values.fullnameOverride -}}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" -}}
 {{- else -}}
@@ -27,28 +27,6 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "mongodb-replicaset.chart" -}}
+{{- define "pulsar.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
-
-{{/*
-Create the name for the admin secret.
-*/}}
-{{- define "mongodb-replicaset.adminSecret" -}}
-    {{- if .Values.auth.existingAdminSecret -}}
-        {{- .Values.auth.existingAdminSecret -}}
-    {{- else -}}
-        {{- template "mongodb-replicaset.fullname" . -}}-admin
-    {{- end -}}
-{{- end -}}
-
-{{/*
-Create the name for the key secret.
-*/}}
-{{- define "mongodb-replicaset.keySecret" -}}
-    {{- if .Values.auth.existingKeySecret -}}
-        {{- .Values.auth.existingKeySecret -}}
-    {{- else -}}
-        {{- template "mongodb-replicaset.fullname" . -}}-keyfile
-    {{- end -}}
 {{- end -}}
