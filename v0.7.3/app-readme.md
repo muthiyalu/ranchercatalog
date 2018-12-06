@@ -1,5 +1,7 @@
-# Kafka
+# Kafka - Catalog Managed  by UST Global
 Kafka is used for building real-time data pipelines and streaming apps. It is horizontally scalable, fault-tolerant, wicked fast, and runs in production in thousands of companies.
+
+This chart is managed and certified by USt Global. 
 
 ## Chart Details
 This chart bootstraps a [Confluent](https://docs.confluent.io/4.0.1/) Kafka deployment. The chart has the following components,

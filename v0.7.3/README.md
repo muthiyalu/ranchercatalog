@@ -1,4 +1,4 @@
-# Apache Kafka Helm Chart
+# Apache Kafka Helm Chart managed and certified by UST Global
 
 This is an implementation of Kafka StatefulSet found here:
 

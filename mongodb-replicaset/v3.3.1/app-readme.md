@@ -1,4 +1,4 @@
-# MongoDB Helm Chart
+# MongoDB Helm Chart managed by UST Global
 
 ## Prerequisites Details
 * Kubernetes 1.8+ with Beta APIs enabled.
